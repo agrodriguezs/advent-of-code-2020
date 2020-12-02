@@ -199,19 +199,51 @@ const input = `1779
 1658
 1715`;
 
- //add numbers from the file to Array
-const data = input.split('\n').map( n  => parseInt(n));
+//add numbers from the file to Array
+const data = input.split('\n').map(n => parseInt(n));
+var result = 0;
 //compare the numbers to see which add up to 2020
-data.forEach((number1, i) => {
-	data.forEach((number2, j) => {
-		if( i !== j ) {
-			if (number1 + number2 === 2020){
-                //show by console the result of the puzzle
-                console.log('puzzle answer: ' + number1*number2);
-                
+function reportRepair() {
+    data.forEach((number1, i) => {
+        data.forEach((number2, j) => {
+            if (i !== j) {
+                if (number1 + number2 === 2020) {
+                    result =  number1 * number2;
+                    return result;
+                }
             }
-        }
-        
+
+        });
+
     });
 
-});
+}
+reportRepair();
+document.getElementById('day-one-one').innerHTML=result;
+//show by console the result of the puzzle
+console.log('puzzle answer: ' + result);
+
+//compare the numbers to see which add up to 2020
+var result2 = 0;
+function reportRepairTwo() {
+
+    data.forEach((number1, i) => {
+        data.forEach((number2, j) => {
+            data.forEach((number3, k) => {
+                if (i !== j && i !== k) {
+                    if (number1 + number2 + number3 === 2020) {
+                        result2 = number1 * number2 * number3;
+                        return result2;
+                    }
+                }
+
+            });
+        });
+    });
+}
+reportRepairTwo();
+document.getElementById('day-one-two').innerHTML= result2;
+//show by console the result of the puzzle
+console.log('puzzle answer: ' + result2);
+
+
