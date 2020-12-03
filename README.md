@@ -6,4 +6,4 @@ You don't need a computer science background to participate - just a little prog
 - [x]  --- Day 2: Password Philosophy ---
 - [x]  --- Day 2: --- Part Two ---
 - [x]  --- Day 3: Toboggan Trajectory ---
-- [x]  --- Day 2: --- Part Two ---
+- [x]  --- Day 3: --- Part Two ---
