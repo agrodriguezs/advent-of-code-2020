@@ -1,4 +1,3 @@
-//const input = `FBFBBFFRLR`;
 const data = input.split(`\n`);
 const binarySpacePart = [];
 data.map(b => binarySpacePart.push(b.split(``)));
@@ -18,7 +17,7 @@ function findRow(letter, zone) {
 function findCol(letter, zone) {
     return (letter === 'L') ? lowerHalf(zone) : upperHalf(zone);
 }
-function seatID(row, col) {
+function getSeatID(row, col) {
     return (row * 8) + col;
 }
 
@@ -31,25 +30,24 @@ binarySpacePart.map((binary) => {
     for (var i = 7; i <= 9; i++) {
         searchCol = findCol(binary[i], searchCol);
     }
-    PartbyID.push(seatID(searchRow[0], searchCol[0]));
+    PartbyID.push(getSeatID(searchRow[0], searchCol[0]));
 });
 var max = Math.max.apply(null, PartbyID);
 var min = Math.min.apply(null, PartbyID);
 
 function searchMissing(PartbyID, max, min) {
-    let found = false;
+    let found = null;
     for (var i = min; i <= max; i++) {
         found = PartbyID.find(e => e == i);
-        if (PartbyID.find(e => e == i + 1) && PartbyID.find(e => e == i - 1) && found == undefined) {
+        if (PartbyID.find(e => e == i + 1) && PartbyID.find(e => e == i - 1) && found == undefined) 
             return i;
-        }
     }
 }
 
 var result1 = max;
 var result2 = searchMissing(PartbyID, max, min);
 document.getElementById('day-five-one').innerHTML = result1;
-console.log(result1 + ' is the maxime');
+console.log(result1 + ' is the largest number ID');
 
 document.getElementById('day-five-two').innerHTML = result2;
-console.log('second part: ' + result2 + ' is my seat');
+console.log(result2 + " it's my seat number");
