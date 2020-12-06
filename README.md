@@ -11,3 +11,5 @@ You don't need a computer science background to participate - just a little prog
 - [x]  --- Day 4: --- Part Two ---
 - [x]  --- Day 5: Passport Processing ---
 - [x]  --- Day 5: --- Part Two ---
+- [x]  --- Day 6: Custom Customs ---
+- [x]  --- Day 6: --- Part Two ---
