@@ -15,3 +15,5 @@ You don't need a computer science background to participate - just a little prog
 - [x]  --- Day 6: --- Part Two ---
 - [x]  --- Day 7: Handy Haversacks ---
 - [x]  --- Day 7: --- Part Two ---
+- [x]  --- Day 8: Handheld Halting ---
+- [x]  --- Day 8: --- Part Two ---
